@@ -30,6 +30,9 @@ class m000000_000002_create_profile_table extends Migration
                 'website' => $this->string(255),
                 'timezone' => $this->string(40),
                 'bio' => $this->text(),
+                'profile_picture' => $this->string(555),
+                'position' => $this->string(255),
+                'intro' => $this->string(755),
             ],
             MigrationHelper::resolveTableOptions($this->db->driverName)
         );

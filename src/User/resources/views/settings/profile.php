@@ -56,6 +56,12 @@ $timezoneHelper = $model->make(TimezoneHelper::class);
 
                 <?= $form->field($model, 'name') ?>
 
+                <?= $form->field($model, 'profile_picture') ?>
+
+                <?= $form->field($model, 'position') ?>
+
+                <?= $form->field($model, 'intro') ?>
+
                 <?= $form->field($model, 'public_email') ?>
 
                 <?= $form->field($model, 'website') ?>

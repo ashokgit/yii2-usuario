@@ -57,6 +57,39 @@ $this->params['breadcrumbs'][] = $this->title;
                             ?>
                         </li>
                     <?php endif; ?>
+                    <?php if (!empty($profile->profile_picture)): ?>
+                        <li>
+                            <i class="glyphicon glyphicon-envelope text-muted"></i>
+                            <?= Html::a(
+                                Html::encode($profile->profile_picture),
+                                'mailto:' .
+                                Html::encode($profile->profile_picture)
+                            )
+                            ?>
+                        </li>
+                    <?php endif; ?>
+                    <?php if (!empty($profile->position)): ?>
+                        <li>
+                            <i class="glyphicon glyphicon-envelope text-muted"></i>
+                            <?= Html::a(
+                                Html::encode($profile->position),
+                                'mailto:' .
+                                Html::encode($profile->position)
+                            )
+                            ?>
+                        </li>
+                    <?php endif; ?>
+                    <?php if (!empty($profile->intro)): ?>
+                        <li>
+                            <i class="glyphicon glyphicon-envelope text-muted"></i>
+                            <?= Html::a(
+                                Html::encode($profile->intro),
+                                'mailto:' .
+                                Html::encode($profile->intro)
+                            )
+                            ?>
+                        </li>
+                    <?php endif; ?>
                     <li>
                         <i class="glyphicon glyphicon-time text-muted"></i>
                         <?= Yii::t('usuario', 'Joined on {0, date}', $profile->user->created_at) ?>

@@ -92,6 +92,9 @@ class Profile extends ActiveRecord
             'gravatarEmailLength' => ['gravatar_email', 'string', 'max' => 255],
             'locationLength' => ['location', 'string', 'max' => 255],
             'websiteLength' => ['website', 'string', 'max' => 255],
+            'profilePictureLength' => ['profile_picture', 'string', 'max' => 255],
+            'positionLength' => ['position', 'string', 'max' => 255],
+            'introLength' => ['intro', 'string', 'max' => 255],
         ];
     }
 
@@ -108,6 +111,9 @@ class Profile extends ActiveRecord
             'website' => Yii::t('usuario', 'Website'),
             'bio' => Yii::t('usuario', 'Bio'),
             'timezone' => Yii::t('usuario', 'Time zone'),
+            'profile_picture' => Yii::t('profile_picture', 'Profile Picture'),
+            'position' => Yii::t('position', 'Position'),
+            'intro' => Yii::t('intro', 'Intro'),
         ];
     }
 
