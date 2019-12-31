@@ -56,7 +56,13 @@ $timezoneHelper = $model->make(TimezoneHelper::class);
 
                 <?= $form->field($model, 'name') ?>
 
-                <?= $form->field($model, 'profile_picture') ?>
+                <?= $form->field($model, 'profile_picture')->widget(\noam148\imagemanager\components\ImageManagerInputWidget::className(), [
+                    'aspectRatio' => (1/1), //set the aspect ratio
+                    'cropViewMode' => 1, //crop mode, option info: https://github.com/fengyuanchen/cropper/#viewmode
+                    'showPreview' => true, //false to hide the preview
+                    'showDeletePickedImageConfirm' => false, //on true show warning before detach image
+                ]);
+                ?>
 
                 <?= $form->field($model, 'position') ?>
 

@@ -24,11 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <?= Html::img(
-                    $profile->getAvatarUrl(230),
-                    [
-                        'class' => 'img-rounded img-responsive',
-                        'alt' => $profile->user->username,
-                    ]
+                    \Yii::$app->imagemanager->getImagePath($profile->profile_picture, 200, 200,"center:center")
                 ) ?>
             </div>
             <div class="col-sm-6 col-md-8">
@@ -60,34 +56,19 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php if (!empty($profile->profile_picture)): ?>
                         <li>
                             <i class="glyphicon glyphicon-envelope text-muted"></i>
-                            <?= Html::a(
-                                Html::encode($profile->profile_picture),
-                                'mailto:' .
-                                Html::encode($profile->profile_picture)
-                            )
-                            ?>
+                            <?= Html::encode($profile->profile_picture) ?>
                         </li>
                     <?php endif; ?>
                     <?php if (!empty($profile->position)): ?>
                         <li>
                             <i class="glyphicon glyphicon-envelope text-muted"></i>
-                            <?= Html::a(
-                                Html::encode($profile->position),
-                                'mailto:' .
-                                Html::encode($profile->position)
-                            )
-                            ?>
+                            <?= Html::encode($profile->position) ?>
                         </li>
                     <?php endif; ?>
                     <?php if (!empty($profile->intro)): ?>
                         <li>
                             <i class="glyphicon glyphicon-envelope text-muted"></i>
-                            <?= Html::a(
-                                Html::encode($profile->intro),
-                                'mailto:' .
-                                Html::encode($profile->intro)
-                            )
-                            ?>
+                            <?= Html::encode($profile->intro) ?>
                         </li>
                     <?php endif; ?>
                     <li>

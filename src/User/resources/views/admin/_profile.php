@@ -33,11 +33,17 @@ use yii\helpers\Html;
             ],
         ],
     ]
-); ?>
+); ?> 
 
 <?= $form->field($profile, 'name') ?>
 <?= $form->field($profile, 'public_email') ?>
-<?= $form->field($profile, 'profile_picture') ?>
+<?= $form->field($profile, 'profile_picture')->widget(\noam148\imagemanager\components\ImageManagerInputWidget::className(), [
+        'aspectRatio' => (1/1), //set the aspect ratio
+        'cropViewMode' => 1, //crop mode, option info: https://github.com/fengyuanchen/cropper/#viewmode
+        'showPreview' => true, //false to hide the preview
+        'showDeletePickedImageConfirm' => false, //on true show warning before detach image
+    ]);
+    ?>
 <?= $form->field($profile, 'position') ?>
 <?= $form->field($profile, 'intro') ?>
 <?= $form->field($profile, 'website') ?>

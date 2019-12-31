@@ -111,9 +111,9 @@ class Profile extends ActiveRecord
             'website' => Yii::t('usuario', 'Website'),
             'bio' => Yii::t('usuario', 'Bio'),
             'timezone' => Yii::t('usuario', 'Time zone'),
-            'profile_picture' => Yii::t('profile_picture', 'Profile Picture'),
-            'position' => Yii::t('position', 'Position'),
-            'intro' => Yii::t('intro', 'Intro'),
+            'profile_picture' => Yii::t('usuario', 'Profile Picture'),
+            'position' => Yii::t('usuario', 'Position'),
+            'intro' => Yii::t('usuario', 'Intro'),
         ];
     }
 
